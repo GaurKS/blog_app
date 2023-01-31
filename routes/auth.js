@@ -11,6 +11,7 @@ const { runValidation } = require('../validators/index');
 
 
 // routing endpoints to middlewares
+// two step auth
 router.post('/signup', userSignupValidator, runValidation, signup);
 router.post('/account-activation', accountActivation);
 

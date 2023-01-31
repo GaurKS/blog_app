@@ -104,6 +104,25 @@ exports.getAllBlogs = async (req, res) => {
             });
 
     } catch (err) {
-
+        return res.status(400).json({
+            status: 403,
+            message: "Something went wrong :(",
+            error: err,
+        });
     }
+}
+
+exports.getSingle = async (req, res) => {
+    const blog = await Blog.findById({ _id: req.params.id });
+    if (!blog) {
+        return res.status(400).json({
+            status: 403,
+            message: "No such blog exist",
+        });
+    }
+    return res.status(200).json({
+        status: 200,
+        message: blog,
+    });
+
 }

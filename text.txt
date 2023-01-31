@@ -1,0 +1,10 @@
+Blog Application - Rest APIs
+Developed by: Gaurav Shah
+
+Tech Stack
+
+Javascript/Typescript
+Nodejs
+Expressjs
+MongoDB
+JWT
